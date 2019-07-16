@@ -50,18 +50,36 @@
     padding: 0 15px;/* prevent layout from touching the edge*/
     max-width: 1100px ;
   }
-
-  .nav-wrapper{
-    /* there is some top padding add that */
-    padding-top: 30px;
-    width: 100%;
+  .nav-bg{
+    background-color: #cacaca;
+    padding: 15px;
+    margin-bottom: 50px;
+  }
+  .skills-bg{
+    display: none;
+    background-color: #e6e6fd;
+    padding: 50px 0;
+  }
+  .nav-wrapper h1{
+    margin:0 0 30px 0;
   }
 
-  nav{
-    margin: 50px 0;
+  nav ul{
+    margin: auto 0;
   }
   nav ul li{
     margin: 5px;
+  }
+  nav ul li a{
+    display: inline-block;
+    width:auto;
+    height: 100%;
+  }
+  nav ul li:hover > a, 
+  nav ul li:hover{
+    background-color: bisque; 
+    color: #eb2227;
+    text-decoration: none;
   }
 
   img{
@@ -73,7 +91,7 @@
     /* made sure to use a square image or we would have an ellipse */
     border-radius: 50%;
     /* set the width for mobile devices */
-    max-width: 100px;
+    max-width: 150px;
   }
 
   ul{
@@ -98,7 +116,7 @@
   }
 
 
-  #portfolio h2{
+  #portfolio h2, #skills h2{
     margin-bottom: 50px;
   }
 
@@ -132,11 +150,17 @@
     margin-bottom: 100px;
   }
 
-
+  .flex-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   /* ======================================
   MEDIA QUERIES
   ====================================== */
   @media (min-width:768px){/* tablet devices */
+    
     .profile-img{
       max-width: 30%;
       float: right;
@@ -149,14 +173,9 @@
     }
     nav ul li{
       /* display elements inline */
-      display: inline;
+      display: inline-block;
     }
-    .flex-wrapper{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+   
     article{
       width: 48%;
       margin-bottom: 50px;
@@ -173,32 +192,42 @@
       padding: 0 15px ;
       display: inline-block;
     }
+    .skills-bg{display: block}
+    #skills .flex-wrapper article{
+      width: 33%;
+    }
   }
   @media (min-width:1024px){/* laptops and larger */
     .nav-wrapper{
-      margin-bottom: 100px;
+      /* there is some top padding add that */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      width: 100%;
     }
     .nav-wrapper h1{
+      margin: 0;
       text-align: left;
-      float: left;
-      width: 50%;
     }
     nav{
-      text-align: right;
       width: auto;
-      float: right;
       margin: 0;
     }
 
     article{
       width: 31%;
     }
+    #skills .flex-wrapper article{
+      width: 33%;
+    }
   }
 
   /* ======================================
   HELPER CLASSES
   ====================================== */
-  .clear-fix{
+  .clear-fix::after{
     content: "";
     display: table;
     clear: both;
