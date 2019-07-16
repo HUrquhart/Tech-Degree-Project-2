@@ -23,7 +23,6 @@ p {margin-bottom: 1.25em;}
 
 h1, h2, h3, h4, h5 {
   color: black;
-  font-size: 1.4em;
   margin: 2.75rem 0 1rem;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 400;
@@ -36,6 +35,16 @@ h1 {
   color: #eb2227;
   font-size: 2em; /* overide the default font sizing */
 }
+
+h2{
+  font-size: 1.6em;
+}
+
+h3, h4, h5{
+  font-size: 1.4em;
+}
+
+
 
 small, .text_small {font-size: 0.8em;}
 
@@ -55,9 +64,12 @@ DEFAULT STYLES
 }
 
 .skills-bg{
-  display: none;
   background-color: #e6e6fd;
   padding: 50px 0;
+}
+#skills article h3,
+#skills article p{
+  display: none;
 }
 
 .nav-wrapper h1{
@@ -124,6 +136,9 @@ a:hover{
 
 #portfolio h2, #skills h2{
   margin-bottom: 50px;
+}
+#skills .flex-wrapper article{
+  width: 30%; /* not exactly 1/3 as we need to give the skills some breathing room */
 }
 
 /* the footer has a line indcating is is separated from the rest of the content and is very subtle*/
@@ -210,9 +225,13 @@ MEDIA QUERIES
     display: inline-block;
   }
 
-  .skills-bg{display: block}
   #skills .flex-wrapper article{
     width: 33%;
+  }
+
+  #skills article h3,
+  #skills article p{
+    display: block;
   }
 
 }
@@ -241,9 +260,7 @@ MEDIA QUERIES
     width: 31%;
   }
 
-  #skills .flex-wrapper article{
-    width: 33%;
-  }
+  
 
 }
 
