@@ -1,0 +1,205 @@
+  *{
+    box-sizing: border-box;
+    /* all text on the smaller devices is centered */
+    text-align: center;
+  }
+
+  /* ======================================
+  FONT SET UP
+  ====================================== */
+  /* 
+    using type scale rules 
+    https://type-scale.com 
+    to correctly setup a good scale for fonts 
+  */
+
+  @import url('https://fonts.googleapis.com/css?family=Nunito|Roboto+Condensed:700&display=swap');
+  html {font-size: 16px;}
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #555;
+  }
+
+  p {margin-bottom: 1.25em;}
+
+  h1, h2, h3, h4, h5 {
+    color: black;
+    font-size: 1.4em;
+    margin: 2.75rem 0 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -2px;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 2em; /* overide the default font sizing */
+  }
+
+  small, .text_small {font-size: 0.8em;}
+
+  /* ======================================
+  DEFAULT STYLES
+  ====================================== */
+  .wrapper{
+    margin: 0 auto;
+    padding: 0 15px;/* prevent layout from touching the edge*/
+    max-width: 1100px ;
+  }
+
+  .nav-wrapper{
+    /* there is some top padding add that */
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  nav{
+    margin: 50px 0;
+  }
+  nav ul li{
+    margin: 5px;
+  }
+
+  img{
+    /* prevent the images from overflowing the containers they are in */
+    max-width: 100%; 
+  }
+  .profile-img{
+    margin: 0 auto;
+    /* made sure to use a square image or we would have an ellipse */
+    border-radius: 50%;
+    /* set the width for mobile devices */
+    max-width: 100px;
+  }
+
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+  ul li{
+    margin: 0;
+    padding: 10px;
+  }
+
+  ul li a, #to-top{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bolder;  
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  a:hover{
+    text-decoration: underline ;
+  }
+
+
+  #portfolio h2{
+    margin-bottom: 50px;
+  }
+
+  /* the footer has a line indcating is is separated from the rest of the content and is very subtle*/
+  footer{border-top: 2px solid rgb(235, 235, 235);}
+  footer ul li a, footer{color: #333;}
+  footer ul{
+    display: none; 
+    padding: 40px 0;
+  }
+  /* elements in the footer need to spaced apart */
+  footer .footer-name{
+    float: left;
+  }
+  footer .to-top{
+    float: right;
+  }
+
+  #contact .desc{
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+  #contact p{
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+  }
+  #contact h2, #contact .desc{
+    margin-bottom: 30px;
+  }
+  #contact{
+    margin-bottom: 100px;
+  }
+
+
+  /* ======================================
+  MEDIA QUERIES
+  ====================================== */
+  @media (min-width:768px){/* tablet devices */
+    .profile-img{
+      max-width: 30%;
+      float: right;
+    }
+    .introduction p{
+      text-align: left;
+      font-size: 1.2em;
+      width: 60%;
+      float: left;
+    }
+    nav ul li{
+      /* display elements inline */
+      display: inline;
+    }
+    .flex-wrapper{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    article{
+      width: 48%;
+      margin-bottom: 50px;
+    }
+    .to-top{
+      display:none;
+    }
+    footer ul{
+      display: block;
+      float: right;
+      padding : 0;
+    }
+    footer ul li{
+      padding: 0 15px ;
+      display: inline-block;
+    }
+  }
+  @media (min-width:1024px){/* laptops and larger */
+    .nav-wrapper{
+      margin-bottom: 100px;
+    }
+    .nav-wrapper h1{
+      text-align: left;
+      float: left;
+      width: 50%;
+    }
+    nav{
+      text-align: right;
+      width: auto;
+      float: right;
+      margin: 0;
+    }
+
+    article{
+      width: 31%;
+    }
+  }
+
+  /* ======================================
+  HELPER CLASSES
+  ====================================== */
+  .clear-fix{
+    content: "";
+    display: table;
+    clear: both;
+  }
