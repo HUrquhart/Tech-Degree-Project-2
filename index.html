@@ -1,96 +1,137 @@
-<!doctype html>
+  <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Harley Urquhart Portfolio</title>
-  <!-- normalize -->
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <!-- google fonts included in the css setting up the fonts-->
-  <!-- our custom styles -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-  <div class="wrapper">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harley Urquhart Portfolio</title>
+    <!-- normalize -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- google fonts included in the css setting up the fonts-->
+    <!-- our custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+
+    
+    <div class="nav-bg">
+      <div id="top" class="wrapper nav-wrapper">
+        <h1><strong>Harley Urquhart</strong></h1>
+        <nav>
+          <ul>
+            <li><a href="#top">HOME</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <!-- I used a header here as it is better suited for the task-->
+      <div class="wrapper">
+        <header class="introduction clear-fix">
+          <img 
+            srcset="images/harley-medium.jpg  2x,
+                    images/harley-low.jpg     1x"
+            src="images/harley.jpg"
+            alt="A photograph of Harley Urquhart"
+            title="Harley is ready for his interview as a front end developer"
+            class="profile-img"
+          />
+          <p>Hi my name is Harley Urquhart I am a web professional with experience in front end desgin and back end development, I'm a lover of Responsive design and I appreciate a generous helping of stupidl simple websites, they are by far the most important part of the web.</p>
+        </header>
+      </div>
       
-    <div id="top" class="nav-wrapper clear-fix">
-      <h1><strong>Harley Urquhart</strong></h1>
-      <nav>
+
+      <div class="wrapper">
+        <section id="portfolio" class="clear-fix">
+          <h2><strong>PORTFOLIO</strong></h2>
+          <div class="flex-wrapper">
+            <article>
+              <img src="images/portfolio-1.png" alt="A simple marketing website" title="A marketing website built using HTML CSS and Javascript, for an exclusive client.">
+              <h3>Marketing Page</h3>
+              <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
+            </article>
+            <article>
+                <img src="images/portfolio-2.png" alt="The Search page of a CMS" title="The search page of a custom built CMS solution for Imaginary Inc.">
+                <h3>Search Page</h3>
+                <p>This project searches through a specific database to find information that the user is trying to look up.</p>
+            </article>
+            <article>
+                <img src="images/portfolio-3.png" alt="A HelloWorld clone website" title="A website built for the unitiated traveller who has no idea of what they really want.">
+                <h3>Travel App</h3>
+                <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
+            </article>
+            <article>
+                <img src="images/portfolio-4.png" alt="My Favorite places to waste time" title="If you are really that curious the spot behind my computer screen is a good place for me to waste time.">
+                <h3>Map of Favourite Spots</h3>
+                <p>This project uses mapping api's to plot points for my favourite spots in the city for a do-it-yourself walking tour.</p>
+            </article>
+            <article><img src="images/portfolio-5.png" alt="Pinterest has a Sister" title="Another photo management application for those who have no grasp on their style.">
+              <h3>Photo Gallery</h3>
+              <p>This project shows pictures form a recent trip to the viewer and allows them to easily navigate through photos.</p></article>
+            <article>
+                <img src="images/portfolio-6.png" alt="A Calculator Application" title="You can call yourself lucky as we've written another calculator app the world never needed">
+                <h3>Calculator</h3>
+                <p>In this application a user enters in a mind numbimgly simply equaion to the equally mind numbing result</p>
+            </article>
+          </div>
+        </section>
+      </div>
+      
+
+
+      <div class="skills-bg">
+        <div class="wrapper">
+          <section id="skills" class="clear-fix">
+              <h2><strong>Skills</strong></h2>
+              <div class="flex-wrapper">
+                <article>
+                  <img src="images/HTML5.png" alt="Hyper Text Markup Language Badge" title="The most important part of all websites, its backbone, and structure">
+                  <h3>HTML 5</h3>
+                  <p>I can bring structure to the world wide web and semantically catergorize information in its most basic form</p>
+                </article>
+                <article>
+                  <img src="images/CSS.png" alt="Cascading Style Sheets Badge" title="The languauge used to make the world wibe web beautiful">
+                  <h3>CSS 3</h3>
+                  <p>Structure is nothing great without an appealing appeance. I can style documents give visual interest to the information age.</p>
+                </article>
+                <article>
+                  <img src="images/JS.png" alt="Javascript badge" title="A powerful that allows websites to become interactive">
+                  <h3>Javascript</h3>
+                  <p>Even if it looks good the web can still be boring, bringing Javascript to the table allows us to interact with the web for new experiences</p>
+                </article>
+              </div>
+            </section>
+          </div>
+      </div>
+      
+      <div class="wrapper">
+        <section id="contact">
+          <h2><strong>CONTACT</strong></h2>
+          <!-- we can wrap the text using the ch length property-->
+          <p class="desc">Want to get in touch and talk about your next big Idea? You can contact me and we can start working on your project today!</p>
+          <p>Phone <strong><a href="tel:0400123456">0400123456</a></strong></p>
+          <p>Email <strong><a href="mailto:no-reply@saltshaker.studio?not%20another%20message">no-reply@saltshaker.studio</a></strong></p>
+        </section>
+      </div>
+
+    </main>
+
+    <div class="wrapper">
+      <footer class="clearfix">
+        <!-- this is essentially a copy of the top level navigation -->
+        <p class="footer-name"><strong>Harley Urquhart</strong></p>
+        <p class="to-top"><a href="#top">BACK TO TOP</a></p>
         <ul>
           <li><a href="#top">HOME</a></li>
           <li><a href="#portfolio">PORTFOLIO</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
-      </nav>
+      </footer>
     </div>
 
-    <main>
-      <!-- I used a header here as it is better suited for the task-->
-      <header class="introduction clear-fix">
-        <img 
-          srcset="images/harley-medium.jpg  2x,
-                  images/harley-low.jpg     1x"
-          src="images/harley.jpg"
-          alt="A photograph of Harley Urquhart"
-          title="Harley is ready for his interview as a front end developer"
-          class="profile-img"
-        />
-        <p>Hi my name is Harley Urquhart I am a web professional with experience in front end desgin and back end development, I'm a lover of Responsive design and I appreciate a generous helping of stupidl simple websites, they are by far the most important part of the web.</p>
-      </header>
-      <section id="portfolio" class="clear-fix">
-        <h2><strong>PORTFOLIO</strong></h2>
-        <div class="flex-wrapper">
-          <article>
-            <img src="images/portfolio-1.png" alt="A simple marketing website" title="A marketing website built using HTML CSS and Javascript, for an exclusive client.">
-            <h3>Marketing Page</h3>
-            <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
-          </article>
-          <article>
-              <img src="images/portfolio-2.png" alt="The Search page of a CMS" title="The search page of a custom built CMS solution for Imaginary Inc.">
-              <h3>Search Page</h3>
-              <p>This project searches through a specific database to find information that the user is trying to look up.</p>
-          </article>
-          <article>
-              <img src="images/portfolio-3.png" alt="A HelloWorld clone website" title="A website built for the unitiated traveller who has no idea of what they really want.">
-              <h3>Travel App</h3>
-              <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
-          </article>
-          <article>
-              <img src="images/portfolio-4.png" alt="My Favorite places to waste time" title="If you are really that curious the spot behind my computer screen is a good place for me to waste time.">
-              <h3>Map of Favourite Spots</h3>
-              <p>This project uses mapping api's to plot points for my favourite spots in the city for a do-it-yourself walking tour.</p>
-          </article>
-          <article><img src="images/portfolio-5.png" alt="Pinterest has a Sister" title="Another photo management application for those who have no grasp on their style.">
-            <h3>Photo Gallery</h3>
-            <p>This project shows pictures form a recent trip to the viewer and allows them to easily navigate through photos.</p></article>
-          <article>
-              <img src="images/portfolio-6.png" alt="A Calculator Application" title="You can call yourself lucky as we've written another calculator app the world never needed">
-              <h3>Calculator</h3>
-              <p>In this application a user enters in a mind numbimgly simply equaion to the equally mind numbing result</p>
-          </article>
-        </div>
-      </section>
-
-
-      <section id="contact">
-        <h2><strong>CONTACT</strong></h2>
-        <!-- we can wrap the text using the ch length property-->
-        <p class="desc">Want to get in touch and talk about your next big Idea? You can contact me and we can start working on your project today!</p>
-        <p>Phone <strong><a href="tel:0400123456">0400123456</a></strong></p>
-        <p>Email <strong><a href="mailto:no-reply@saltshaker.studio?not%20another%20message">no-reply@saltshaker.studio</a></strong></p>
-      </section>
-  </main>
-  <footer class="clearfix">
-    <!-- this is essentially a copy of the top level navigation -->
-    <p class="footer-name"><strong>Harley Urquhart</strong></p>
-    <p class="to-top"><a href="#top">BACK TO TOP</a></p>
-    <ul>
-      <li><a href="#top">HOME</a></li>
-      <li><a href="#portfolio">PORTFOLIO</a></li>
-      <li><a href="#contact">CONTACT</a></li>
-    </ul>
-  </footer>
-</div>
-</body>
+  </body>
 </html>
